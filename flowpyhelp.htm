@@ -1,9 +1,9 @@
-<b>Flowpy!</b>
+<b>FlowpyGIS!</b>
 version 0.07 October 2009
 <p>
-I have recently written a Python script, called "Flowpy", to replace the functionality of the Flow Data Model Tools. I have not created any formal documentation for Flowpy yet, but the following comments may be sufficient to get things working. The script is much faster, is less error prone, and does not rely on ArcGIS to operate. However, the code does require Python 2.6 and GDAL; both are free and open-source. Instructions to get GDAL and Python installed and working can be found here: <a href="http://ucsb.pbworks.com/Using-GDAL-with-Python">http://ucsb.pbworks.com/Using-GDAL-with-Python</a>.
+I have recently written a Python script, called "FlowpyGIS", to replace the functionality of the Flow Data Model Tools. I have not created any formal documentation for Flowpy yet, but the following comments may be sufficient to get things working. The script is much faster, is less error prone, and does not rely on ArcGIS to operate. However, the code does require Python 2.6 and GDAL; both are free and open-source. Instructions to get GDAL and Python installed and working can be found here: <a href="http://ucsb.pbworks.com/Using-GDAL-with-Python">http://ucsb.pbworks.com/Using-GDAL-with-Python</a>.
 <p>
-Flowpy is available at: <a href="http://enj.com/software">http://www.enj.com/software/index.php</a>. The script uses an interaction matrix file and corresponding coordinate pair file, calculates gross, net, or two-way flow from them, and yields a shapefile. To run Flowpy, you'll need the two script files: "flowpyInterface.py" and "flowpyv07.py". On the download page, these files end with the suffix .txt. Once the files are downloaded, replace the .txt with .py so your computer will realize they are Python scripts. You will also need two data files, a text file of point coordinates and a text file interaction matrix. Concerning the file specifications for the data files, the coordinate pair file should be one coordinate pair per line and the x y coordinates must be space delimited. The interaction file requires a square space delimited matrix of magnitude values. Each row refers to a "from" node; each column refers to a "to" node. In the following file examples, flow from row 3 (node 3: coordinates -75 40), column 11 (node 11: -96.75 32.75)coordinates possesses the value 10. 
+FlowpyGIS is available on Github at: <a href="https://github.com/glennon/FlowpyGIS">https://github.com/glennon/FlowpyGIS</a>. The script uses an interaction matrix file and corresponding coordinate pair file, calculates gross, net, or two-way flow from them, and yields a shapefile. To run FlowpyGIS standalone, you'll need the two script files: "flowpyInterface.py" and "flowpyv07.py". You will also need two data files, a text file of point coordinates and a text file interaction matrix. Concerning the file specifications for the data files, the coordinate pair file should be one coordinate pair per line and the x y coordinates must be space delimited. The interaction file requires a square space delimited matrix of magnitude values. Each row refers to a "from" node; each column refers to a "to" node. In the following file examples, flow from row 3 (node 3: coordinates -75 40), column 11 (node 11: -96.75 32.75)coordinates possesses the value 10. 
 <p>
 
 Example formatted coordinate pair data:<br>
@@ -42,12 +42,13 @@ Example corresponding formatted interaction matrix:<br>
 <p>
 
 
+<p>Some sample data, bankinteract.txt and bankpoints.txt can be found in the repo.</p>
 
-To make Flowpy work, edit FlowpyInterface.py to include your own variables and filenames as appropriate and then execute FlowpyInterface. The code is documented well enough to make pretty good guesses of the names to change. When the FlowpyInterface script runs, it passes the variables over to Flowpy07. Otherwise, Flowpy07 can be run independently from the Python command line, but that is a little more advanced.
+To make FlowpyGIS work as a standalone script, edit FlowpyInterface.py to include your own variables and filenames as appropriate and then execute FlowpyInterface. The code is documented well enough to make pretty good guesses of the names to change. When the FlowpyInterface script runs, it passes the variables over to Flowpy07. To get all the Python/GDAL bindings working right, I often just launch FlowpyGIS from a FWTools shell (<a href="http://fwtools.maptools.org/">http://fwtools.maptools.org/</a>)
 
 <p>
 
-Eventually I'll write more formal doc and/or a video demo. Hope this helps.
+Hope this helps.
 <p>
 Regards,<br>
 Alan Glennon<br>
