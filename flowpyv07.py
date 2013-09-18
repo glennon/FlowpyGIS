@@ -19,6 +19,7 @@ def shapefilemaker(typeofcalculation,fulldirectorystring,outputfilename,fulldirO
             nodes = open(nodefilename,'r')
         except IOError, e:
             print 'file open error:', e
+            sys.exit()
 
         numberofnodes = 0
         for line in nodes:
