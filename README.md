@@ -6,3 +6,5 @@ A Python 2.7 script to convert an origin-destination (OD) matrix to a shapefile.
 Ages ago, I made a short demo video --> http://vimeo.com/9264988
 
 For novices the easiest way to get this code rolling is to run it from the shell of FWTools.
+
+This license for this code is GPL v3.
