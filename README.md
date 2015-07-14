@@ -7,4 +7,6 @@ Ages ago, I made a short demo video --> http://vimeo.com/9264988
 
 For novices the easiest way to get this code rolling is to run it from the shell of FWTools.
 
-This license for this code is GPL v3.
+This license for this code is GPL v3.  
+
+FlowpyGIS code is used and augmented by the FlowMapper plugin for QGIS by Cem Gulluoglu. It is in QGIS' official plugin repository. More info [here](http://95.9.195.180/).
